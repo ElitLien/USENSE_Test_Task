@@ -1,16 +1,3 @@
-<div style="max-width: 400px; margin: 50px auto; text-align: center;">
-  <input [(ngModel)]="password" type="password" placeholder="Enter password" (input)="checkPasswordStrength()" style="width: 100%; padding: 10px;">
-  <div style="display: flex; margin-top: 20px;">
-    <div [ngStyle]="{'background-color': sectionColors[0]}" class="strength-section"></div>
-    <div [ngStyle]="{'background-color': sectionColors[1]}" class="strength-section"></div>
-    <div [ngStyle]="{'background-color': sectionColors[2]}" class="strength-section"></div>
-  </div>
-</div>
-
-<style>
-.strength-section {
-  flex: 1;
-  height: 20px;
-  margin: 0 5px;
-}
-</style>
+<form [formGroup]="form">
+  <app-password-strength formControlName="password"></app-password-strength>
+</form>
